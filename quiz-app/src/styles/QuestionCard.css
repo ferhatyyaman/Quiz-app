@@ -1,0 +1,51 @@
+.question{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.89),rgba(61, 118, 217, 0.885));
+    
+}
+.questionCard{
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    border-radius: 10px;
+}
+.questionTitle{
+    font-size:28px;
+    padding: 50px;
+}
+
+.questionChoice{
+    padding: 50px;
+}
+.questionChoice button{
+    width: 45%;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.questionChoice button:hover{
+    background-color: rgba(0, 0, 0, 0.047)
+    
+}
+
+.questionTimer{
+    margin-bottom: 50px;
+    width: 150px;
+    height: 150px;
+    font-size: 45px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
