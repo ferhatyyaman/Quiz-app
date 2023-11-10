@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import * as api from '../api/api';
 import { QuestionCard } from '../components/QuestionCard';
+import { ResultModal } from '../components/ResultModal';
 
 export const Quiz = () => {
   const { difficulty, amount } = useParams();
@@ -21,6 +22,9 @@ const [resultModal, setResultModal] = useState(false);
   console.log(questionsData);
   return (
     <div>
+        {
+          resultModal ? <ResultModal score={score} setScore={setScore} /> :
+       
        <QuestionCard 
        questionsData={questionsData}
        score={score}
@@ -31,6 +35,7 @@ const [resultModal, setResultModal] = useState(false);
        setResultModal={setResultModal}
 
        />
+      }
     </div>
   )
 }

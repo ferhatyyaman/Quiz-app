@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import "../styles/QuestionCard.css"
 export const QuestionCard = ({ 
     questionsData,
@@ -18,7 +18,28 @@ export const QuestionCard = ({
         if(checkAnswer){
             setScore(score+100)
         }
-            };    
+        setCount(count+1)
+        if(count==9) setResultModal(true)
+        setTimer(30)
+            };   
+        
+        useEffect(()=>{
+            const interval = setInterval(()=>{
+                if(timer>0){
+                    setTimer(timer-1)
+                }
+                if(timer==0 && count<10){
+                    setCount(count+1)
+                    setTimer(30)
+                }
+                else if(count>=10){
+                    setResultModal(true)
+                }
+            },1000)
+            return ()=>{
+                clearInterval(interval)
+            }
+        },[timer])
         
   return (
     <div className="question">
