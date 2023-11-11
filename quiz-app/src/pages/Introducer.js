@@ -28,7 +28,7 @@ export const Introducer = () => {
                 <DropdownComponent data={difficulty} setDifficultyChange={setDifficultyChange} difficultyChange={difficultyChange}/>
             </div>
             <div className='main-btn'>
-                <Button onClick={startQuiz}>Quize Başla</Button>
+                <Button variant="success" onClick={startQuiz}>Quize Başla</Button>
             </div>
         </div>
     </div>

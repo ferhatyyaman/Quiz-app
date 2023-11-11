@@ -8,10 +8,11 @@ export const DropdownComponent = ({data,setDifficultyChange,difficultyChange}) =
   }
   return (
     <div>
-    <DropdownButton
+    <DropdownButton 
       id="dropdown-basic-button"
-      title={difficultyChange || "Select Difficulty"}
+      title={difficultyChange || "Zorluk Seç"}
       onSelect={handleSelect}
+      variant="secondary" 
     >
       {data.map((difficulty) => (
         <Dropdown.Item key={difficulty} eventKey={difficulty}>
