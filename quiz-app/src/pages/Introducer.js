@@ -22,7 +22,7 @@ export const Introducer = () => {
   return (
     <div className='container'>
         <div className='main'>
-            <img src="https://cdn-icons-png.flaticon.com/512/5705/5705144.png" alt="" width={350} />
+            <img src="" alt="" width={350} />
             
             <div className='main-dropdown'>
                 <DropdownComponent data={difficulty} setDifficultyChange={setDifficultyChange} difficultyChange={difficultyChange}/>
